@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/441f0cea52.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>Hi, I am <span>Gaurav </span><br>Prajapati From India</h1>
+            </div>
+        </div>
+    </div>
+    <!-- About Me Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg" alt="user">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Experienced software developer with a passion for creating
+                        innovative and efficient solutions also committed to continuous
+                        learning with the latest technologies. seeking challenging
+                        opportunity where I can fully utilize my skills contributing to the
+                        success of the organization</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('por')">Position Of Responsibilities</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interface </li><br>
+                            <li><span>Full Stack Developer</span><br>Designing full fledge application</li><br>
+                            <li><span>App Development</span><br>Building Android /iOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="achievements">
+                        <ul>
+                            <li><span>Winner of Smart India Hackathon 2023</span><br>Leaded the team Troubleshooter.io and made
+                                web as well as app for the problem statement start-up ayush portal  </li>
+                        </ul>
+                        <br>
+                        <ul>
+                            <li><span>2nd Runner Up in Technical Paper Presentation</span><br>Leaded the team Initiators and made
+                                web application for connecting start-ups and entrepreneurs named Let's Connect Project and given the technical paper presentation on the same </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>St. Francis Institute Of Technology</span><br>Persuing B.E. Information
+                                Technology| Nov 2021</li><br>
+                            <li><span>St. Anne's High School and Jr College of Science</span><br>Higher Secondary
+                                Certificate | Jan 2019 - May
+                                2021<br><b>Percentage: 91.3%</b><br></li><br>
+                            <li><span>Smt. Rajdevi Hindi Vidyalaya</span><br>School March 2019 <br><b>Percentage:
+                                    86.20%</b><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="por">
+                        <ul>
+                            <li><span>Vice President | ISTE Committee Working 2023</span><br>Organizing Technical Events
+                                and managing people.
+                                <br>Organized many workshops and seminars for students<br>
+                            </li><br>
+                            <li><span>Technical Executive | ISTE Committee July 2022-23</span><br>Contributed in many
+                                workshops and Technical games
+                                organized by ISTE.<br>Helped in making the bomb for the technical event called
+                                mosaic using arduino<br></li><br>
+                            <li><span>Technical Executive | SKDC Committee July 2022-23</span><br>Contributed in many
+                                workshops and Technical games
+                                organized by SKDC.<br>Helped in organizing the 24hrs hackathon called CodeCrush 1.0 and
+                                provided technical support in the event also made many events reports <br></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services  -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I specialize in crafting visually stunning, user-friendly websites that leave a lasting impact.
+                        Explore my work below, and let's collaborate to bring your digital vision to life.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-slack"></i>
+                    <h2>Backend Developer</h2>
+                    <p>I transform ideas into robust, efficient, and scalable digital solutions. With a passion for
+                        coding and a deep understanding of server-side technologies, I've crafted a diverse range of
+                        backend systems.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Developer</h2>
+                    <p> I specialize in creating engaging, user-centric mobile applications for various platforms. Dive
+                        into my work below, and let's explore how I can turn your app idea into a reality.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.png" alt="work1">
+                    <div class="layer">
+                        <h3>Amazon Clone App</h3>
+                        <p>Explore my impressive Amazon Clone App, crafted with Flutter. This app replicates the
+                            seamless shopping experience of Amazon, offering features like intuitive shopping,
+                            personalized recommendations, and real-time order tracking. With a focus on
+                            user-friendliness and security, this app is the perfect addition to any e-commerce
+                            portfolio. Experience the future of online retail today.</p>
+                        <a href="https://github.com/itsgaurav355/amazon-clone-flutter" new><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work2.png" alt="work2">
+                    <div class="layer">
+                        <h3>Melophile Music Player</h3>
+                        <p>Melophile is an innovative music player project, designed and developed using JavaFX and
+                            MySQL, that harmoniously combines the love for music with cutting-edge technology. With its
+                            intuitive interface, seamless database integration, and impressive features, Melophile
+                            offers music enthusiasts a delightful listening experience. Explore this project to witness
+                            the fusion of JavaFX's rich graphical capabilities and MySQL's robust data management, all
+                            dedicated to the world of music.</p>
+                        <a href="https://github.com/itsgaurav355/Melophile" new><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work3.png" alt="work3">
+                    <div class="layer">
+                        <h3>Let's Connect</h3>
+                        <p>Our award-winning presentation introduced "Let's Connect," a groundbreaking application
+                            designed to bridge the gap between visionary entrepreneurs and corporate giants. With "Let's
+                            Connect," we've opened up new avenues for collaboration and funding opportunities like never
+                            before.</p>
+                        <a href="https://github.com/itsgaurav355/Let-s-Connect" new><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <!-- Connect With Me -->
+
+    <script src="./index.js"></script>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> officialgauravprajapati@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>09326376702</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/its_gaurav_355/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/gaurav-prajapati-85686728b/"><i
+                                class="fa-brands fa-linkedin"></i></i></a>
+                        <a href="https://github.com/itsgaurav355"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/My Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Enter Your Name" required>
+                        <input type="email" name="email" placeholder="Enter Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Gaurav. Made by Gaurav Prajapati </p>
+        </div>
+    </div>
+</body>
+
+</html>
