@@ -4,16 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Gaurav Prajapati | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
     <script src="https://kit.fontawesome.com/441f0cea52.js" crossorigin="anonymous"></script>
+    <!-- Animation libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id="header">
+        <div class="animated-background">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
         <div class="container">
-            <nav>
-                <img src="images/logo.png" class="logo">
+            <nav class="animate__animated animate__fadeInDown">
+                <a href="#header" class="logo-link">
+                    <h2 class="logo-text">G<span>AURAV</span></h2>
+                </a>
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -24,28 +36,40 @@
                 </ul>
                 <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
-            <div class="header-text">
-                <p>Software Developer</p>
-                <h1>Hi, I am <span>Gaurav </span><br>Prajapati From India</h1>
+            <div class="header-content">
+                <div class="header-text animate__animated animate__fadeIn animate__delay-1s">
+                    <p class="animate__animated animate__slideInRight animate__delay-2s">Software Developer</p>
+                    <h1 class="animate__animated animate__fadeInUp animate__delay-2s">Hi, I am <span>Gaurav</span><br>Prajapati</h1>
+                    <div class="header-btns animate__animated animate__fadeIn animate__delay-3s">
+                        <a href="#contact" class="btn primary-btn glow-on-hover">Contact Me</a>
+                        <a href="images/Gaurav Prajapati.pdf" download class="btn secondary-btn glow-on-hover">Download CV</a>
+                    </div>
+                </div>
+                <div class="header-image animate__animated animate__fadeIn animate__delay-2s">
+                    <img src="images/gaurav.png" alt="Gaurav Prajapati" class="profile-img">
+                </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
         </div>
     </div>
     <!-- About Me Section -->
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.jpg" alt="user">
+                <div class="about-col-1 reveal" data-aos="fade-right">
+                    <img src="images/user.jpg" alt="user" class="about-image">
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Experienced software developer with a passion for creating
+                <div class="about-col-2 reveal" data-aos="fade-left">
+                    <h1 class="sub-title" data-aos="fade-up">About Me</h1>
+                    <p data-aos="fade-up" data-aos-delay="200">Experienced software developer with a passion for creating
                         innovative and efficient solutions also committed to continuous
                         learning with the latest technologies. seeking challenging
                         opportunity where I can fully utilize my skills contributing to the
                         success of the organization</p>
 
-                    <div class="tab-titles">
+                    <div class="tab-titles" data-aos="fade-up" data-aos-delay="300">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
@@ -53,52 +77,52 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Full Stack Developer</span><br>Designing full fledge application with MERN </li><br>
-                            <li><span>App Development</span><br>Building Android /iOS apps using Java , Flutter and native Platforms</li>
+                            <li data-aos="fade-up" data-aos-delay="100"><span>Full Stack Developer</span><br>Designing full fledge application with MERN </li><br>
+                            <li data-aos="fade-up" data-aos-delay="200"><span>App Development</span><br>Building Android /iOS apps using Java , Flutter and native Platforms</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="achievements">
                         <ul>
-                            <li><span> 3rd Prize in Colloquium 2024 </span><br>
+                            <li data-aos="fade-up" data-aos-delay="100"><span> 3rd Prize in Colloquium 2024 </span><br>
                                 Won 3rd Prize in Colloquium 2024 at SFIT
                                 a department level Competition for College Event management System which digitalise the event management process</li>
                         </ul>
                         <br>
                         <ul>
-                            <li><span>Winner of Smart India Hackathon 2023</span><br>Leaded the team Troubleshooter.io and made
+                            <li data-aos="fade-up" data-aos-delay="200"><span>Winner of Smart India Hackathon 2023</span><br>Leaded the team Troubleshooter.io and made
                                 web as well as app for the problem statement start-up ayush portal  </li>
                         </ul>
                         <br>
                         <ul>
-                            <li><span>2nd Runner Up in Technical Paper Presentation</span><br>Leaded the team Initiators and made
+                            <li data-aos="fade-up" data-aos-delay="300"><span>2nd Runner Up in Technical Paper Presentation</span><br>Leaded the team Initiators and made
                                 web application for connecting start-ups and entrepreneurs named Let's Connect Project and given the technical paper presentation on the same </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>St. Francis Institute Of Technology</span><br>Persuing B.E. Information
+                            <li data-aos="fade-up" data-aos-delay="100"><span>St. Francis Institute Of Technology</span><br>Persuing B.E. Information
                                 Technology| Nov 2021</li><br>
-                            <li><span>St. Anne's High School and Jr College of Science</span><br>Higher Secondary
+                            <li data-aos="fade-up" data-aos-delay="200"><span>St. Anne's High School and Jr College of Science</span><br>Higher Secondary
                                 Certificate | Jan 2019 - May
                                 2021<br><b>Percentage: 91.3%</b><br></li><br>
-                            <li><span>Smt. Rajdevi Hindi Vidyalaya</span><br>School March 2019 <br><b>Percentage:
+                            <li data-aos="fade-up" data-aos-delay="300"><span>Smt. Rajdevi Hindi Vidyalaya</span><br>School March 2019 <br><b>Percentage:
                                     86.20%</b><br></li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="por">
                         <ul>
-                            <li><span>Advisor | ISTE Committee 2024 Working</span><br>
+                            <li data-aos="fade-up" data-aos-delay="100"><span>Advisor | ISTE Committee 2024 Working</span><br>
                                 Helping and guiding the team members in organizing the events and managing the team
                             </li><br>
-                            <li><span>Vice President | ISTE Committee 2023-24</span><br>Organizing Technical Events
+                            <li data-aos="fade-up" data-aos-delay="200"><span>Vice President | ISTE Committee 2023-24</span><br>Organizing Technical Events
                                 and managing people.
                                 <br>Organized many workshops and seminars for students<br>
                             </li><br>
-                            <li><span>Technical Executive | ISTE Committee July 2022-23</span><br>Contributed in many
+                            <li data-aos="fade-up" data-aos-delay="300"><span>Technical Executive | ISTE Committee July 2022-23</span><br>Contributed in many
                                 workshops and Technical games
                                 organized by ISTE.<br>Helped in making the bomb for the technical event called
                                 mosaic using arduino<br></li><br>
-                            <li><span>Technical Executive | SKDC Committee July 2022-23</span><br>Contributed in many
+                            <li data-aos="fade-up" data-aos-delay="400"><span>Technical Executive | SKDC Committee July 2022-23</span><br>Contributed in many
                                 workshops and Technical games
                                 organized by SKDC.<br>Helped in organizing the 24hrs hackathon called CodeCrush 1.0 and
                                 provided technical support in the event also made many events reports <br></li>
@@ -112,29 +136,29 @@
     <!-- Services  -->
     <div id="services">
         <div class="container">
-            <h1 class="sub-title">My Services</h1>
+            <h1 class="sub-title" data-aos="fade-up">My Services</h1>
             <div class="services-list">
-                <div>
+                <div class="card-3d" data-aos="fade-up" data-aos-delay="100">
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Design</h2>
                     <p>I specialize in crafting visually stunning, user-friendly websites that leave a lasting impact.
                         Explore my work below, and let's collaborate to bring your digital vision to life.</p>
-                    <a href="#">Learn more</a>
+                    <a href="#" class="glow-on-hover">Learn more</a>
                 </div>
-                <div>
+                <div class="card-3d" data-aos="fade-up" data-aos-delay="300">
                     <i class="fa-brands fa-slack"></i>
                     <h2>Backend Developer</h2>
                     <p>I transform ideas into robust, efficient, and scalable digital solutions. With a passion for
                         coding and a deep understanding of server-side technologies, I've crafted a diverse range of
                         backend systems.</p>
-                    <a href="#">Learn more</a>
+                    <a href="#" class="glow-on-hover">Learn more</a>
                 </div>
-                <div>
+                <div class="card-3d" data-aos="fade-up" data-aos-delay="500">
                     <i class="fa-brands fa-app-store"></i>
                     <h2>App Developer</h2>
                     <p> I specialize in creating engaging, user-centric mobile applications for various platforms. Dive
                         into my work below, and let's explore how I can turn your app idea into a reality.</p>
-                    <a href="#">Learn more</a>
+                    <a href="#" class="glow-on-hover">Learn more</a>
                 </div>
             </div>
         </div>
@@ -142,9 +166,9 @@
     <!-- Projects -->
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My Projects</h1>
+            <h1 class="sub-title" data-aos="fade-up">My Projects</h1>
             <div class="work-list">
-                <div class="work">
+                <div class="work" data-aos="fade-up" data-aos-delay="100">
                     <img src="images/work1.png" alt="work1">
                     <div class="layer">
                         <h3>Event-Horizon</h3>
@@ -154,23 +178,23 @@
                             Integrated YOLO v8 for image detection during registration,
                             featuring user and admin modules to streamline the event
                             organization process.</p>
-                        <a href="https://github.com/itsgaurav355/event-horizon" new><i class="fa-solid fa-link"></i></a>
+                        <a href="https://github.com/itsgaurav355/event-horizon" target="_blank"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work" data-aos="fade-up" data-aos-delay="300">
                     <img src="images/work2.png" alt="work2">
                     <div class="layer">
-                        <h3>Ayusharks SIH</h3>
+                        <h3>Ayusharks SIH - Smart India Hackathon Winner</h3>
                         <p> Developed Ayusharks for the AYUSH portal to connect
                             entrepreneurs with established entities and mentors, featuring
                             personalized interfaces for each user.
                             Implemented community features, chat, search for communities
                             and start-ups, mentorship, profiles, connections, and a
                             dashboard.</p>
-                        <a href="https://github.com/itsgaurav355/ayusharks-sih" new><i class="fa-solid fa-link"></i></a>
+                        <a href="https://github.com/itsgaurav355/ayusharks-sih" target="_blank"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work" data-aos="fade-up" data-aos-delay="500">
                     <img src="images/work3.png" alt="work3">
                     <div class="layer">
                         <h3>Let's Connect</h3>
@@ -178,37 +202,36 @@
                             designed to bridge the gap between visionary entrepreneurs and corporate giants. With "Let's
                             Connect," we've opened up new avenues for collaboration and funding opportunities like never
                             before.</p>
-                        <a href="https://github.com/itsgaurav355/Let-s-Connect" new><i class="fa-solid fa-link"></i></a>
+                        <a href="https://github.com/itsgaurav355/Let-s-Connect" target="_blank"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
             </div>
-            <a href="https://github.com/itsgaurav355?tab=repositories" class="btn">See More</a>
+            <a href="https://github.com/itsgaurav355" class="btn glow-on-hover" data-aos="fade-up">See More</a>
         </div>
     </div>
     <!-- Connect With Me -->
 
-    <script src="./index.js"></script>
     <div id="contact">
         <div class="container">
             <div class="row">
-                <div class="contact-left">
+                <div class="contact-left" data-aos="fade-right">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fas fa-paper-plane"></i> officialgauravprajapati@gmail.com</p>
-                    <p><i class="fas fa-phone-square-alt"></i>09326376702</p>
-                    <div class="social-icons">
+                    <p data-aos="fade-up" data-aos-delay="100"><i class="fas fa-paper-plane"></i> officialgauravprajapati@gmail.com</p>
+                    <p data-aos="fade-up" data-aos-delay="200"><i class="fas fa-phone-square-alt"></i>09326376702</p>
+                    <div class="social-icons" data-aos="fade-up" data-aos-delay="300">
                         <a href="https://www.instagram.com/its_gaurav_355/"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/in/gaurav-prajapati-85686728b/"><i
                                 class="fa-brands fa-linkedin"></i></i></a>
                         <a href="https://github.com/itsgaurav355"><i class="fa-brands fa-github"></i></a>
                     </div>
-                    <a href="images/My Resume.pdf" download class="btn btn2">Download CV</a>
+                    <a href="images/Gaurav Prajapati.pdf" download class="btn btn2 glow-on-hover" data-aos="fade-up" data-aos-delay="400">Download CV</a>
                 </div>
-                <div class="contact-right">
+                <div class="contact-right" data-aos="fade-left">
                     <form>
-                        <input type="text" name="Name" placeholder="Enter Your Name" required>
-                        <input type="email" name="email" placeholder="Enter Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+                        <input type="text" name="Name" placeholder="Enter Your Name" required data-aos="fade-up" data-aos-delay="100">
+                        <input type="email" name="email" placeholder="Enter Your Email" required data-aos="fade-up" data-aos-delay="200">
+                        <textarea name="Message" rows="6" placeholder="Your Message" data-aos="fade-up" data-aos-delay="300"></textarea>
+                        <button type="submit" class="btn btn2 glow-on-hover" data-aos="fade-up" data-aos-delay="400">Submit</button>
                     </form>
                 </div>
             </div>
@@ -217,6 +240,10 @@
             <p>Copyright © Gaurav. Made by Gaurav Prajapati </p>
         </div>
     </div>
+
+    <!-- Animation Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>

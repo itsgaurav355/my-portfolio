@@ -1,0 +1,527 @@
+/* Animation Keyframes */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(13, 0, 255, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(13, 0, 255, 0.6); }
+  100% { box-shadow: 0 0 5px rgba(13, 0, 255, 0.2); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeSlideUp {
+  0% { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Particle Animation for Background */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(13, 0, 255, 0.2);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Animated Elements */
+.logo {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Fix for header typing animation conflict */
+.header-text h1 {
+  white-space: normal;
+  overflow: visible;
+  border-right: none;
+}
+
+.reveal {
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 1s ease;
+}
+
+/* Skill bars */
+.skill-bar {
+  height: 10px;
+  background: #262626;
+  border-radius: 5px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0d00ff, #40bcff);
+  border-radius: 5px;
+  position: relative;
+  transition: width 1s ease-in-out;
+}
+
+/* Card 3D effect */
+.card-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Button glow effect */
+.glow-on-hover {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #0d00ff, #40bcff, #0d00ff, #40bcff);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: rotateBackground 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  transition: opacity .3s ease-in-out;
+}
+
+.glow-on-hover:hover:after {
+  opacity: 0;
+}
+
+/* Background shapes */
+.bg-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.1;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #0d00ff, #40bcff);
+}
+
+.shape-1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 10%;
+  animation: float 10s infinite ease-in-out;
+}
+
+.shape-2 {
+  width: 150px;
+  height: 150px;
+  bottom: 20%;
+  right: 10%;
+  animation: float 12s infinite ease-in-out;
+}
+
+.shape-3 {
+  width: 80px;
+  height: 80px;
+  bottom: 10%;
+  left: 20%;
+  animation: float 8s infinite ease-in-out;
+}
+
+.shape-4 {
+  width: 50px;
+  height: 50px;
+  top: 30%;
+  right: 20%;
+  animation: float 15s infinite ease-in-out;
+}
+
+.shape-5 {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  left: 50%;
+  animation: float 9s infinite ease-in-out;
+}
+
+/* Responsiveness for animations */
+@media only screen and (max-width: 600px) {
+  .bg-shapes {
+    display: none;
+  }
+  
+  .card-3d {
+    transform-style: flat;
+  }
+}
+
+/* Additional responsive animations */
+.social-icons a i {
+  transition: all 0.5s ease;
+}
+
+.social-icons a:hover i {
+  transform: translateY(-10px) scale(1.2);
+}
+
+/* Sub-title animation */
+.sub-title {
+  position: relative;
+}
+
+.sub-title::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: -10px;
+  left: 0;
+  background: linear-gradient(90deg, #0d00ff, #40bcff);
+  transition: width 0.8s ease;
+}
+
+.sub-title:hover::after {
+  width: 100px;
+}
+
+/* Image hover effect */
+.about-col-1 img {
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+/* Floating scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: float 2s ease-in-out infinite;
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 20px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  position: relative;
+}
+
+.scroll-indicator span::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: float 1.5s infinite;
+}
+
+/* Animated background for header */
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.animated-background .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(13, 0, 255, 0.1);
+    animation: float 15s infinite ease-in-out;
+}
+
+.animated-background .circle:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    left: -100px;
+    top: 10%;
+    animation-delay: 0s;
+}
+
+.animated-background .circle:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    right: -50px;
+    top: 40%;
+    animation-delay: 5s;
+}
+
+.animated-background .circle:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    left: 30%;
+    bottom: 10%;
+    animation-delay: 2s;
+}
+
+/* Fix skill-container styles */
+.skill-container {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.skill-item {
+    margin-bottom: 25px;
+}
+
+.skill-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-percentage {
+    height: 100%;
+    background: linear-gradient(90deg, #0d00ff, #40bcff);
+    border-radius: 4px;
+    position: relative;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Profile image animations */
+.profile-img {
+    animation: profileFloat 6s ease-in-out infinite;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 255, 0.5));
+}
+
+@keyframes profileFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Add a subtle glow effect around the profile image */
+.header-image::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(ellipse at center, rgba(13, 0, 255, 0.2) 0%, rgba(13, 0, 255, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+/* Add this to your animations.css file to enhance the About section */
+
+/* Image loading effect */
+.about-col-1 img {
+    position: relative;
+    animation: fadeInFromLeft 1s ease-out forwards;
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Add border glow effect on hover */
+.about-col-1 img:hover {
+    border: 2px solid transparent;
+    background: linear-gradient(#080808, #080808) padding-box,
+                linear-gradient(90deg, #0d00ff, #40bcff) border-box;
+}
+
+/* Improve tab transitions */
+.tab-contents {
+    position: relative;
+}
+
+.tab-contents ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.tab-contents ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(90deg, #0d00ff, #40bcff);
+    border-radius: 50%;
+}
+
+.tab-links.active-link {
+    color: #40bcff;
+}
+
+/* Services section animations */
+.services-list div {
+    position: relative;
+    overflow: hidden;
+}
+
+.services-list div i {
+    transition: all 0.5s ease;
+}
+
+.services-list div:hover i {
+    color: #40bcff;
+    transform: scale(1.2);
+}
+
+/* Portfolio hover effects */
+.work {
+    transition: transform 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.work::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 0, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.work:hover {
+    transform: translateY(-10px);
+}
+
+.work:hover::after {
+    opacity: 1;
+}
+
+/* Contact form effects */
+form input, form textarea {
+    position: relative;
+    overflow: hidden;
+}
+
+form input::after, form textarea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #0d00ff, #40bcff);
+    transition: width 0.5s ease;
+}
+
+form input:focus::after, form textarea:focus::after {
+    width: 100%;
+}
+
+/* Social icons animation */
+.social-icons a {
+    position: relative;
+    display: inline-block;
+}
+
+.social-icons a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, #0d00ff, #40bcff);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.social-icons a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Enhanced glow effect for buttons */
+.btn.glow-on-hover {
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.btn.glow-on-hover:hover {
+    color: #fff;
+    box-shadow: 0 0 20px rgba(13, 0, 255, 0.7);
+}
