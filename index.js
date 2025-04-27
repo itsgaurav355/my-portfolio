@@ -66,15 +66,16 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: "Java", percentage: 95 },
         { name: "Python", percentage: 85 },
         { name: "React.js", percentage: 85 },
-        { name: "Node.js", percentage: 95 },
-        { name: "MongoDB", percentage: 90 }
-      
+        { name: "Node.js", percentage: 95 },      
     ];
     
     // Find the skills list
     const skillsList = document.querySelector('#skills ul');
     
     if (skillsList) {
+        // The skills are now handled in the HTML directly with the new structure
+        // No need to programmatically generate them, so we can comment this out
+        /*
         // Clear existing skills
         skillsList.innerHTML = '';
         
@@ -120,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         skillsList.appendChild(skillContainer);
+        */
     }
     
     
@@ -285,3 +287,18 @@ document.addEventListener('DOMContentLoaded', function() {
         aboutImg.removeAttribute('style');
     }
 }); // End of DOMContentLoaded
+
+// Add hover effects to tech stack items
+document.addEventListener('DOMContentLoaded', function() {
+    // Add animations to tech stack spans
+    const techStackItems = document.querySelectorAll('.tech-stack span');
+    techStackItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+});

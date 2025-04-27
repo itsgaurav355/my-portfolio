@@ -1000,4 +1000,82 @@ form .btn2 {
 .highlight {
     color: #40bcff;
     font-weight: 600;
+    display: inline;
+}
+
+/* Updated Skills section styling */
+.skills-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.skill-category h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.skill-category h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #0d00ff;
+    border-radius: 50%;
+}
+
+#about .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#about .tech-stack span {
+    background: rgba(13, 0, 255, 0.1);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+#about .tech-stack span:hover {
+    background: rgba(13, 0, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 0, 255, 0.2);
+}
+
+/* Update achievements styling */
+#achievements li {
+    margin-bottom: 20px !important;
+    border-left: 2px solid rgba(13, 0, 255, 0.3);
+    padding-left: 15px !important;
+    transition: border-left 0.3s ease;
+}
+
+#achievements li:hover {
+    border-left: 2px solid rgba(13, 0, 255, 0.8);
+}
+
+#achievements span.highlight,
+#achievements strong.highlight {
+    color: #40bcff;
+}
+
+/* Enhance education styling */
+#education strong.highlight {
+    color: #40bcff;
+    font-weight: 600;
+}
+
+#education li {
+    margin-bottom: 20px !important;
 }
